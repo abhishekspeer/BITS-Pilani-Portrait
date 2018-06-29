@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Forms</title>
+  </head>
+
+  <body class="container">
+<h1>Forms</h1>
+<h3>Email and Password</h3>
+<!-- NOTE: PLAIN TEXT FIELD -->
+<div class="form-group">
+  <label for="userfirst">First Name</label>
+  <input id="userfirst" class="form-control" type="text" name="userfirstname" value="" placeholder="Enter First Name">
+</div>
+<div class="form-group">
+  <label for="userlast">Last Name</label>
+  <input id="userlast" class="form-control" type="text" name="userlastname" value="" placeholder="Enter Last Name">
+</div>
+
+
+<!-- NOTE: EMAIL AND PASSWORD -->
+<form>
+  <div class="form-group">
+    <label for="useremail">Email Address</label>
+    <input id="useremail" class="form-control" type="email" name="useremail" value="" placeholder="Enter Email" aria-describedby="helpmsg">
+    <!-- WARNING: form-control class meant to be used for text form controls like input select and textarea -->
+    <small id="helpmsg" class="form-text text-muted">This is meant to give any comment related to it's input tag.</small>
+  </div>
+  <div class="form-group"> <!-- WARNING:: used div twice to resolve gap issues, to check, remove the two tags and put these two inside one div. -->
+    <label for="userpass">Password</label>
+    <input id="userpass" class="form-control" type="password" name="userpassword" value="" placeholder="Password">
+  </div>
+</form>
+
+<!-- NOTE: SELECT AND MULTIPLE SELECT -->
+<form>
+  <div class="form-group">
+    <label for="feedback">Select</label>
+    <select id="feedback" class="form-control" name="singlecorrect">
+      <option value="5">Excellent</option>
+      <option value="4">Good</option>
+      <option value="3">Average</option>
+      <option value="2">Below Average</option>
+      <option value="1">Unsatisfactory</option> <!--defined value goes to backend upon selection-->
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="multifeedback">Multiple Select</label>
+    <select multiple id="multifeedback" class="form-control" name="multiplecorrect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+</form>
+
+
+<!-- NOTE: FILE INPUT (for file input form-control-file is used instead of form-control)  -->
+<form>
+  <div class="form-group">
+    <label for="fileinput">Upload File</label>
+    <input id="fileinput" class="form-control-file" type="file" name="uploadedfile">
+  </div>
+  <!-- can't change that choose file text over the button using value, and no file chosen text is complimentary with the input -->
+</form>
+
+
+<!-- NOTE: SIZING OF INPUT FIELDS (use form-control with form-control-lg or form-control-sm -->
+  <div class="form-group">
+    <label for="largeinput">Large Input</label>
+    <input id="largeinput" class="form-control form-control-lg" type="text" name="" value="generated using form-control-lg">
+    <label for="smallinput">Small Input</label>
+    <input id="smallinput" class="form-control form-control-sm" type="text" name="" value="generated using form-control-sm">
+  </div>
+
+<!-- NOTE: RANGE INPUT/ SLIDE BARS -->
+  <form>
+    <div class="form-group">
+      <label for="rangeinput">Scrollable Range Input</label>
+      <input  id="rangeinput" class="form-control-range" type="range" name="range" value="">
+    </div>
+  </form>
+
+<!-- NOTE: RADIOS AND CHECKBOXES -->
+<!-- (same name for only one selection possible, seperate div for each radio used)  -->
+  <form>
+    <p>Radios</p>
+    <div class="form-group">
+      <input id="radio1" class="form-check-input" type="radio" name="radioname" value="">
+      <label for="radio1" class="form-check-label">Default Radio</label>
+    </div>
+
+    <div class="form-group">
+      <input id="radio2" class="form-check-input" type="radio" name="radioname" value="" checked>
+      <label for="radio2" class="form-check-label">Checked Radio</label>
+    </div>
+
+    <div class="form-group">
+      <input id="radio3" class="form-check-input" type="radio" name="radioname" value="" disabled>
+      <label for="radio3" class="form-check-label">Disabled Radio</label>
+    </div>
+  </form>
+
+  <form>
+    <p>Checkboxes</p>
+    <div class="form-group">
+      <input id="cb1" class="form-check-input-inline" type="checkbox" name="cb1name" value="">
+      <label for="cb1" class="form-check-label-inline">Default Checkbox</label>
+    </div>
+
+    <div class="form-group">
+      <input id="cb2" class="form-check-input-inline" type="checkbox" name="cb2name" value="" checked>
+      <label for="cb2"class="form-check-label-inline">Checked Checkbox</label>
+    </div>
+
+    <div class="form-group">
+      <input id="cb3" class="form-check-input-inline" type="checkbox" name="cb3name" value="" disabled>
+      <label for="cb3" class="form-check-label-inline">Disabled Checkbox</label>
+    </div>
+  </form>
+
+
+  </body>
+</html>
